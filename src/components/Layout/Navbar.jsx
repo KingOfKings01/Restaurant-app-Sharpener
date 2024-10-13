@@ -1,23 +1,26 @@
 import { FaCartShopping } from "react-icons/fa6";
 import styles from './navbar.module.css'
 import CartModal from "../Cart/CartModal";
-import { useState } from "react";
+import { useState, useContext } from "react";
+import CartContext from "../../store/cart-context";
 
 export default function Navbar() {
   const [modalIsOpen, setModalIsOpen] = useState(false);
+  const context = useContext(CartContext)
+
   return (
     <div>
 
-    <nav className={styles.nav}>
+      <nav className={styles.nav}>
         <h2>ReactMeals</h2>
-        <button className={styles.cartBtn} onClick={()=>setModalIsOpen(true)}>
-            <FaCartShopping />
-            <span>Your Cart</span>
-            <span className={styles.cartCount}>{0}</span>
+        <button className={styles.cartBtn} onClick={() => setModalIsOpen(true)}>
+          <FaCartShopping />
+          <span>Your Cart</span>
+          <span className={styles.cartCount}>{context.itemCount}</span>
         </button>
 
-    </nav>
-        {modalIsOpen && <CartModal setModalIsOpen={setModalIsOpen}/>}
+      </nav>
+      {modalIsOpen && <CartModal setModalIsOpen={setModalIsOpen} />}
     </div>
   )
 }
