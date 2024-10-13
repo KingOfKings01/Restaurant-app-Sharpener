@@ -1,88 +1,158 @@
-.center{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10px;
-    margin-bottom: 20px;
+.center {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 
-.card{
-    width: 60vw;
-    padding: 20px 40px;
-    background-color: #313131;
-    color: #f2f2f2;
-    border-radius: 10px;
-    box-shadow: 0px 0px 5px rgba(0,0,0,0.2);
-    transition: transform 0.3s ease-in-out;
+.card {
+  width: 60vw;
+  padding: 20px 40px;
+  background-color: #313131;
+  color: #f2f2f2;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
 
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 
-    text-align: center;
+  text-align: center;
 }
 
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 
-.list{
+  .product {
     display: flex;
-    flex-direction: column;
-    gap: 10px;
+    justify-content: space-between;
 
-    .product{
-        display: flex;
-        justify-content: space-between;
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      /* width: 100px; */
 
-        form{
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            /* width: 100px; */
-
-            label{
-                font-weight: bold;
-            }
-
-            input{
-                padding-left: 5px;
-                width: 50px;
-            }
-        }
-
-        .addToCart{
-            background-color: #771F08;
-            color: #f2f2f2;
-            border: none;
-            border-radius: 20px;
-            padding: 10px 20px;
-            cursor: pointer;
-        }
-    }
-
-    hr{
-        margin-bottom: 20px;
-    }
-}
-
-.card2{
-    width: 60vw;
-    padding: 20px 40px;
-    background-color: #f2f2f2;
-    /* color: #f2f2f2; */
-    border-radius: 10px;
-    box-shadow: 0px 0px 5px rgba(0,0,0,0.2);
-    transition: transform 0.3s ease-in-out;
-
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-
-    .cursive{
-        font-style: italic;
-    }
-
-    .amount{
-        font-size: 20px;
+      label {
         font-weight: bold;
-        color: #894918;
+      }
+
+      input {
+        padding-left: 5px;
+        width: 50px;
+      }
     }
+
+    .addToCart {
+      background-color: #771f08;
+      color: #f2f2f2;
+      border: none;
+      border-radius: 20px;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+  }
+
+  hr {
+    margin-bottom: 20px;
+  }
+}
+
+.card2 {
+  width: 60vw;
+  padding: 20px 40px;
+  background-color: #f2f2f2;
+  /* color: #f2f2f2; */
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  .cursive {
+    font-style: italic;
+  }
+
+  .amount {
+    font-size: 20px;
+    font-weight: bold;
+    color: #894918;
+  }
+}
+
+.background {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  /* min-height: 100vh; */
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal {
+  position: fixed;
+  top: 30%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  width: 40vw;
+  padding: 20px;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  .cursive {
+    font-style: italic;
+  }
+
+  .totalAmount {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .btns {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+
+    button {
+      border-radius: 20px;
+      padding: 10px 30px;
+      cursor: pointer;
+    }
+
+    .close {
+      background-color: #f2f2f2;
+      color: #771f08;
+      border: 1px solid #771f08;
+    }
+
+    .close:hover {
+      background-color: #891818;
+      color: #f2f2f2;
+    }
+    .order {
+      background-color: #771f08;
+      color: #f2f2f2;
+      border: none;
+    }
+
+    .order:hover {
+      background-color: #891818;
+      color: #f2f2f2;
+    }
+  }
 }
