@@ -19,9 +19,6 @@ export default function Meals() {
 
     const { id, name, price } = product;
 
-    console.log(parseInt(qtyValues[id]));
-    console.log(cartQuantities);
-
     setCartQuantities({ ...cartQuantities, [id]: parseInt(qtyValues[id]) || 1 });
     setQtyValues({ ...qtyValues, [id]: 1 });
 

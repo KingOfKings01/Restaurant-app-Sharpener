@@ -15,7 +15,7 @@
 
   transform: translate(-50%, -50%);
 
-  width: 40vw;
+  width: 50vw;
   padding: 20px;
   background-color: #f2f2f2;
   color: #000;
@@ -42,6 +42,27 @@
 
   .center{
     text-align: center;
+  }
+
+  .actions{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+
+    button{
+      padding: 5px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      background-color: #fff;
+      color: #771f08;
+      border: 1px solid #771f08;
+      
+    }
+    
+    button:hover{
+      background-color: #771f08;
+      color: #fff;  
+    }
   }
 
   .totalAmount {

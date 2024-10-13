@@ -3,7 +3,7 @@ import { useContext } from "react";
 import CartContext from "../../store/cart-context";
 
 export default function CartModal({ setModalIsOpen }) {
-  const { items, totalAmount } = useContext(CartContext);
+  const { items, totalAmount,increaseQuantity, decreaseQuantity } = useContext(CartContext);
 
   return (
     <div>
@@ -15,6 +15,7 @@ export default function CartModal({ setModalIsOpen }) {
                 <td>Name</td>
                 <th>Price</th>
                 <th>Quantity</th>
+                <th>Actions</th>
               </tr>
             </thead>
             <tbody>
@@ -23,6 +24,10 @@ export default function CartModal({ setModalIsOpen }) {
                   <td className={styles.cursive}>{name}</td>
                   <td className={styles.center}>{price}</td>
                   <td className={styles.center}>{quantity}</td>
+                  <td className={styles.actions}>
+                    <button onClick={()=>decreaseQuantity(id)}>-</button>
+                    <button onClick={()=>increaseQuantity(id)}>+</button>
+                  </td>
                 </tr>
               ))}
             </tbody>
